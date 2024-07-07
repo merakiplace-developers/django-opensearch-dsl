@@ -14,6 +14,7 @@ from . import fields
 from .apps import DODConfig
 from .exceptions import ModelFieldNotMappedError
 from .management.enums import OpensearchAction
+from .models import PositiveBigIntegerField
 from .search import Search
 from .signals import post_index
 
@@ -33,7 +34,7 @@ model_field_class_to_field_class = {
     models.ImageField: fields.FileField,
     models.IntegerField: fields.IntegerField,
     models.NullBooleanField: fields.BooleanField,
-    models.PositiveBigIntegerField: fields.LongField,
+    PositiveBigIntegerField: fields.LongField,
     models.PositiveIntegerField: fields.IntegerField,
     models.PositiveSmallIntegerField: fields.ShortField,
     models.SlugField: fields.KeywordField,
